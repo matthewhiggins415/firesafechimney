@@ -26,7 +26,8 @@ import AdminAnalytics from './screens/screens/adminanalytics/AdminAnalytics';
 import AdminServices from './screens/screens/adminservices/AdminServices';
 import AdminCreateService from './screens/screens/admincreateservice/AdminCreateService';
 import AdminEditService from './screens/screens/admineditservice/AdminEditService';
-import PublicService from './screens/screens/publicservice/PublicService'
+import PublicService from './screens/screens/publicservice/PublicService';
+import AdminInbox from './screens/screens/admininbox/AdminInbox'
 
 // Components
 import Navbar from './components/navbar/Navbar';
@@ -49,7 +50,7 @@ const App = () => {
 
   const gtagID = process.env.REACT_APP_GTAG_TRACKING_ID
   ReactGA.initialize(gtagID)
-  ReactGA.send({ hitType: 'pageview', page: '/' })
+  ReactGA.send({ hitType: 'pageview', page: window.location.pathname })
 
   return (
     <Router>
@@ -73,6 +74,7 @@ const App = () => {
         <Route path='/admin/create-service' element={<AdminCreateService user={user} notify={notify} />} />
         <Route path='/admin/services/:id' element={<AdminEditService user={user} notify={notify} />} />
         <Route path='/services/:id' element={<PublicService />} />
+        <Route path='/myinbox' element={<AdminInbox user={user} notify={notify} />} />
       </Routes>
       <Footer />
     </Router>

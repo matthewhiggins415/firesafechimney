@@ -53,6 +53,11 @@ const Navbar = ({ user, notify, setUser }) => {
     setShowMenu(!showMenu)
   }
 
+  const handleEmailNavigate = () => {
+    navigate('/myinbox')
+    setShowMenu(!showMenu)
+  }
+
   console.log(user)
   return (
     <NavbarContainer>
@@ -80,6 +85,7 @@ const Navbar = ({ user, notify, setUser }) => {
             <AdminBtn onClick={handleContactNavigate}>Contacts</AdminBtn>
             <AdminBtn onClick={handleBlogNavigate}>Blogs</AdminBtn>
             <AdminBtn onClick={handleAnalyticsNavigate}>Analytics</AdminBtn>
+            <AdminBtn onClick={handleEmailNavigate}>Emails</AdminBtn>
             <LogoutBtn onClick={handleSignOut}>Logout</LogoutBtn>
           </DropDownMenu>
         </>
