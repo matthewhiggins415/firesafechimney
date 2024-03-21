@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ContactContainer, Container, Img, MapContainer, Form, FormTop, FormBottom, InputTop, InputBottom, SubmitBtn } from './Contact.styles';
-import serviceMap from '../../images/servicemap.png';
+import serviceMap from '../../images/firesafeservicemap.png';
 import { createContact } from '../../api/contact';
 
 const Contact = ({ notify }) => {
