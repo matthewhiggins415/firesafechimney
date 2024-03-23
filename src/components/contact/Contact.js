@@ -54,7 +54,7 @@ const Contact = ({ notify }) => {
     <ContactContainer>
       <Container>
         <MapContainer>
-          <h1>Area of Service</h1>
+          <h1>Servicing San Diego & surrounding areas</h1>
           <Img src={serviceMap} alt="area of service"/>
         </MapContainer>
         <Form onSubmit={onHandleSubmit}>
