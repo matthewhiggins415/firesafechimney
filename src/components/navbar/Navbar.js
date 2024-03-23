@@ -7,6 +7,7 @@ import { signOut } from '../../api/user';
 import { IoIosMenu } from "react-icons/io";
 
 const Navbar = ({ user, notify, setUser, company }) => {
+  const googleAnalytics = process.env.REACT_APP_GOOGLE_ANALYTICS_LINK;
   const [showMenu, setShowMenu] = useState(false);
 
   const navigate = useNavigate();
@@ -85,7 +86,7 @@ const Navbar = ({ user, notify, setUser, company }) => {
             <AdminBtn onClick={handleContactNavigate}>Contacts</AdminBtn>
             <AdminBtn onClick={handleBlogNavigate}>Blogs</AdminBtn>
             <AdminBtn onClick={handleImagesNavigate}>Images</AdminBtn>
-            <AdminLink to="https://analytics.google.com/analytics/web/?pli=1#/p430515532/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank">Analytics</AdminLink>
+            <AdminLink to={googleAnalytics} target="_blank">Analytics</AdminLink>
             <LogoutBtn onClick={handleSignOut}>Logout</LogoutBtn>
           </DropDownMenu>
         </>
