@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavbarContainer, AvailabilityContainer, LogoContainer, Img, AdminNavBarSection, AdminBtn, LogoutBtn, DropDownMenu, CallUsContainer, CallContainer, PaymentLink } from './Navbar.styles'
+import { NavbarContainer, AvailabilityContainer, LogoContainer, Img, AdminNavBarSection, AdminBtn, LogoutBtn, DropDownMenu, CallUsContainer, CallContainer, PaymentLink, AdminLink } from './Navbar.styles'
 import { CiClock2 } from "react-icons/ci";
 import logo from '../../images/fscc.jpg';
 import { useNavigate } from "react-router-dom";
@@ -36,11 +36,6 @@ const Navbar = ({ user, notify, setUser, company }) => {
 
   const handleBlogNavigate = () => {
     navigate('/adminblogs')
-    setShowMenu(!showMenu)
-  }
-
-  const handleAnalyticsNavigate = () => {
-    navigate('/analytics')
     setShowMenu(!showMenu)
   }
 
@@ -90,7 +85,7 @@ const Navbar = ({ user, notify, setUser, company }) => {
             <AdminBtn onClick={handleContactNavigate}>Contacts</AdminBtn>
             <AdminBtn onClick={handleBlogNavigate}>Blogs</AdminBtn>
             <AdminBtn onClick={handleImagesNavigate}>Images</AdminBtn>
-            <AdminBtn onClick={handleAnalyticsNavigate}>Analytics</AdminBtn>
+            <AdminLink to="https://analytics.google.com/analytics/web/?pli=1#/p430515532/reports/reportinghub?params=_u..nav%3Dmaui" target="_blank">Analytics</AdminLink>
             <LogoutBtn onClick={handleSignOut}>Logout</LogoutBtn>
           </DropDownMenu>
         </>

@@ -63,6 +63,23 @@ export const AdminNavBarSection = styled.div`
   justify-content: space-between;
 `
 
+export const AdminLink = styled(Link)`
+  width: 200px;
+  padding: 15px;
+  background-color: white;
+  transition: 150ms ease-in-out;
+  border: none;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+`
+
 export const AdminBtn = styled.button`
   width: 200px;
   padding: 15px;
