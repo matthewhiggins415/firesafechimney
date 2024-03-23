@@ -35,6 +35,7 @@ export const MapContainer = styled.div`
 
   h1 {
     font-family: 'Mulish', sans-serif;
+    text-align: center;
   }
 
   @media only screen and (max-width: 700px) {
