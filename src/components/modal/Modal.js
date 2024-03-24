@@ -5,7 +5,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import { createContact } from '../../api/contact';
 
 const Modal = ({ modalOpen, setModalOpen, notify }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({
     objectID: 0,
     firstname: '', 
@@ -137,7 +137,7 @@ const Modal = ({ modalOpen, setModalOpen, notify }) => {
         </Form>
         <LoadingContainer loading={loading}>
           <h2>Loading</h2>
-          <BounceLoader color="#36d7b7" />
+          <BounceLoader color="#ee1c4a" />
         </LoadingContainer>
       </FormContainer>
     </ModalContainer>
