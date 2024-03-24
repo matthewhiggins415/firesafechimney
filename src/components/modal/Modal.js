@@ -71,7 +71,7 @@ const Modal = ({ modalOpen, setModalOpen, notify }) => {
       }
 
       try {
-        const res = createContact(payloadData)
+        const res = await createContact(payloadData)
         console.log(res)
         if (res.status === 201) {
           notify('thank you for your info');
