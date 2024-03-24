@@ -5,7 +5,7 @@ import BounceLoader from "react-spinners/BounceLoader";
 import { createContact } from '../../api/contact';
 
 const Modal = ({ modalOpen, setModalOpen, notify }) => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     objectID: 0,
     firstname: '', 
