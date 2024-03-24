@@ -28,10 +28,10 @@ const Footer = ({ company }) => {
       <FooterInfo>
         <h4>Company</h4>
         <FooterServicesContainer>
-          <a href="tel:+18007933763">{company.companyPhone}</a>
-          <FooterServiceLink>leboneck@gmail.com</FooterServiceLink>
+          <a href="tel:+18007933763">{company?.companyPhone}</a>
+          <FooterServiceLink>{company?.companyEmail}</FooterServiceLink>
           <FooterServiceLink>San Diego, California</FooterServiceLink>
-          <FooterServiceLink to={'https://firesafechimneycare.com'}>{company.companyWebsite}</FooterServiceLink>
+          <FooterServiceLink to={'https://firesafechimneycare.com'}>{company?.companyWebsite}</FooterServiceLink>
         </FooterServicesContainer>
       </FooterInfo>
       <FooterInfo>
@@ -47,9 +47,9 @@ const Footer = ({ company }) => {
         <FooterServicesContainer>
           <FooterServiceLink to='/blogs'>Blog</FooterServiceLink>
           <FooterServiceLink to="/about">About Us</FooterServiceLink>
-          <FooterServiceLink to={company.companyYelp} target="_blank">Reviews</FooterServiceLink>
-          {company.Instagram === 'none' ? <FooterServiceLink to={company.Instagram}>Instagram</FooterServiceLink> : <></>}
-          {company.Facebook === 'none' ? <FooterServiceLink to={company.Instagram}>Instagram</FooterServiceLink> : <></>}
+          <FooterServiceLink to={company?.companyYelp} target="_blank">Reviews</FooterServiceLink>
+          {company?.Instagram === 'none' ? <FooterServiceLink to={company?.Instagram}>Instagram</FooterServiceLink> : <></>}
+          {company?.Facebook === 'none' ? <FooterServiceLink to={company?.Facebook}>Instagram</FooterServiceLink> : <></>}
         </FooterServicesContainer>
       </FooterInfo>
       <LoginBtn>
